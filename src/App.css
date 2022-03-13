@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Dunkin Sans Bold';
+  src: url("./dunkin-sans-bold.otf") format("opentype");
+}
+
+.app {
+  padding-top: 3rem;
+  flex: 1;
+}
+
+#input {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#output {
+  user-select: none;
+}
+
+footer {
+  flex: 0 !important;
+  margin-top: 1rem;
+}
