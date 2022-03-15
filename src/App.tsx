@@ -11,10 +11,12 @@ import FormOption from "./FormOption";
 import './App.css';
 
 const bgColors: Map<string, string> = new Map([
-  ['Blue', '#B7EDFF'],
-  ['Green', '#BAD367'],
-  ['Yellow', '#E7E063'],
-  ['Pink', '#FEA1BB'],
+  ['Blue', '#B6EEFD'],
+  ['Green', '#BAD564'],
+  ['Yellow', '#FEFF71'],
+  ['Orange', '#FFAB58'],
+  ['Pink', '#FFA6C2'],
+  ['Purple', '#AEBAEA'],
   ['Transparent', 'transparent']
 ])
 
