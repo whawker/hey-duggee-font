@@ -16,7 +16,6 @@ function ColorButton({ name, color, onClick, isActive }: ColorButtonProps) {
   return (
     <CircleButton
       label={name}
-      title={name}
       style={{ backgroundColor: color }}
       onClick={handleClick}
     >

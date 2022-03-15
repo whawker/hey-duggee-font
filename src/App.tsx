@@ -65,9 +65,9 @@ function App() {
                 ))}
               </div>
             </FormOption>
-            <FormOption title="Refresh">
+            <FormOption title="Refresh colors">
               <CircleButton
-                label="Reload"
+                label="Randomise colors"
                 onClick={() => setForceReload(num => num + 1)}
               >
                 &#8635;

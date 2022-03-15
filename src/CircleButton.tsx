@@ -10,6 +10,7 @@ function CircleButton({ label, ...rest }: CircleButtonProps) {
     <button
       {...rest}
       aria-label={label}
+      title={label}
       className="circle-button button is-rounded is-borderless is-paddingless"
     />
   );
