@@ -30,18 +30,23 @@ export interface SVGTextLineProps extends SVGProps<SVGTextElement> {
 }
 
 function SVGTextLine ({ text, hasOutline = true, isHey = false, ...rest }: SVGTextLineProps) {
-  let chosenColors: string[] = []
+  let availableColors: string[] = [...colors]
   const styles: SVGProps<SVGTSpanElement>[] = text.split('').map((l, i) => {
     if (NEW_LINE_CHAR.test(l)) {
       return {}
     }
 
-    if (chosenColors.length === 0) {
-      chosenColors = [...colors];
+    let fill: string;
+    if (availableColors.length === 1) {
+      fill = availableColors[0];
+      // Next set of colors should ignore this one, to avoid sequential characters with same color
+      availableColors = [...colors].filter(c => c !== fill);
+    } else {
+      fill = availableColors.splice(randomIndex(availableColors), 1)[0];
     }
 
     return {
-      fill: chosenColors.splice(randomIndex(chosenColors), 1)[0],
+      fill,
       fontSize: isHey ? 64 : randomItem(fontSizes)
     };
   })
