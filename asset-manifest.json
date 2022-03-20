@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hey-duggee-font/static/css/main.d8cee78a.css",
-    "main.js": "/hey-duggee-font/static/js/main.735ea3a1.js",
+    "main.js": "/hey-duggee-font/static/js/main.c01d7a16.js",
     "static/media/dunkin-sans-bold.otf": "/hey-duggee-font/static/media/dunkin-sans-bold.041578fec603b181703c.otf",
     "index.html": "/hey-duggee-font/index.html",
     "main.d8cee78a.css.map": "/hey-duggee-font/static/css/main.d8cee78a.css.map",
-    "main.735ea3a1.js.map": "/hey-duggee-font/static/js/main.735ea3a1.js.map"
+    "main.c01d7a16.js.map": "/hey-duggee-font/static/js/main.c01d7a16.js.map"
   },
   "entrypoints": [
     "static/css/main.d8cee78a.css",
-    "static/js/main.735ea3a1.js"
+    "static/js/main.c01d7a16.js"
   ]
 }
