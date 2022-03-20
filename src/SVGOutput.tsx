@@ -22,7 +22,7 @@ function SVGOutput({ text, outline, background, ...rest }: SVGOutputProps) {
             key={line}
             text={line}
             isHey={isHey}
-            x='50%'
+            x="50%"
             y={`${(i * 90) + (isHey ? 115 : 100)}`}
             hasOutline={outline}
           />

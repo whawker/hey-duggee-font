@@ -10,6 +10,8 @@ import CircleButton from "./CircleButton";
 import FormOption from "./FormOption";
 import './App.css';
 
+const OUTPUT_ID = 'output';
+
 const bgColors: Map<string, string> = new Map([
   ['Blue', '#B6EEFD'],
   ['Green', '#BAD564'],
@@ -27,15 +29,16 @@ function App() {
   const [,setForceReload] = useState<number>(0)
 
   const handleChange: ChangeEventHandler<HTMLTextAreaElement> = useCallback((e) => {
-    setText(e.target.value.toUpperCase());
+    const text = e.target.value.toUpperCase();
+    setText(text.replace('&', '+'))
   }, [])
 
   const handleSaveAsPng = useCallback(() => {
-    saveSvgAsPng(document.getElementById('output'), "duggee.png");
+    saveSvgAsPng(document.getElementById(OUTPUT_ID), "duggee.png");
   }, [])
 
   const handleSaveAsSvg = useCallback(() => {
-    saveSvg(document.getElementById('output'), "duggee.svg");
+    saveSvg(document.getElementById(OUTPUT_ID), "duggee.svg");
   }, [])
 
   return (
@@ -56,7 +59,7 @@ function App() {
               <input type="checkbox" checked={outline} onChange={() => setOutline(b => !b)} />
             </FormOption>
             <FormOption title="Background">
-              <div className='buttons'>
+              <div className="buttons">
                 {Array.from(bgColors.entries()).map(([name, color]) => (
                   <ColorButton
                     key={name}
@@ -78,10 +81,10 @@ function App() {
           </div>
         </div>
         <div className="column is-half">
-          <SVGOutput id="output" text={text} outline={outline} background={background} />
+          <SVGOutput id={OUTPUT_ID} text={text} outline={outline} background={background} />
           <div className="level">
             <FormOption title="Download">
-              <div className='buttons'>
+              <div className="buttons">
                 <button className="button is-rounded" onClick={handleSaveAsPng}>
                   Download as PNG
                 </button>
